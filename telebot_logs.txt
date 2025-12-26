@@ -1,0 +1,6 @@
+(venv) vboxuser@ubuntu:~/projects/ai-consultant/telegram_bot$ python3 bot.py 
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @simpleaiconsultantbot id=8239076823 - 'AI Consultant'
+INFO:aiogram.event:Update id=617974337 is handled. Duration 416 ms by bot id=8239076823
+INFO:aiogram.event:Update id=617974338 is handled. Duration 6312 ms by bot id=8239076823
+

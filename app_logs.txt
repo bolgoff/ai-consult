@@ -1,0 +1,363 @@
+(venv) vboxuser@ubuntu:~/projects/ai-consultant$ sudo docker compose logs -f
+ai_consultant_app  | Qdrant
+ai_consultant_app  | Vectors to db
+ai_consultant_app  | error
+ai_consultant_app  | INFO:     Started server process [1]
+ai_consultant_app  | INFO:     Waiting for application startup.
+ai_consultant_app  | INFO:     Application startup complete.
+ai_consultant_app  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+ai_consultant_app  | INFO:     Shutting down
+ai_consultant_app  | INFO:     Waiting for application shutdown.
+ai_consultant_app  | INFO:     Application shutdown complete.
+ai_consultant_app  | INFO:     Finished server process [1]
+ai_consultant_app  | Qdrant
+ai_consultant_app  | Vectors to db
+ai_ollama          | 
+ai_ollama          | time=2025-12-26T12:41:43.158Z level=INFO source=routes.go:1554 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11434 OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/root/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+ai_ollama          | time=2025-12-26T12:41:43.173Z level=INFO source=images.go:493 msg="total blobs: 0"
+ai_ollama          | time=2025-12-26T12:41:43.173Z level=INFO source=images.go:500 msg="total unused blobs removed: 0"
+ai_ollama          | time=2025-12-26T12:41:43.174Z level=INFO source=routes.go:1607 msg="Listening on [::]:11434 (version 0.13.5)"
+ai_ollama          | time=2025-12-26T12:41:43.200Z level=INFO source=runner.go:67 msg="discovering available GPUs..."
+ai_ollama          | time=2025-12-26T12:41:43.215Z level=INFO source=server.go:429 msg="starting runner" cmd="/usr/bin/ollama runner --ollama-engine --port 42597"
+ai_ollama          | time=2025-12-26T12:41:43.706Z level=INFO source=server.go:429 msg="starting runner" cmd="/usr/bin/ollama runner --ollama-engine --port 43389"
+ai_ollama          | time=2025-12-26T12:41:43.905Z level=INFO source=runner.go:106 msg="experimental Vulkan support disabled.  To enable, set OLLAMA_VULKAN=1"
+ai_ollama          | time=2025-12-26T12:41:43.908Z level=INFO source=types.go:60 msg="inference compute" id=cpu library=cpu compute="" name=cpu description=cpu libdirs=ollama driver="" pci_id="" type="" total="7.8 GiB" available="7.7 GiB"
+ai_ollama          | time=2025-12-26T12:41:43.908Z level=INFO source=routes.go:1648 msg="entering low vram mode" "total vram"="0 B" threshold="20.0 GiB"
+ai_ollama          | [GIN] 2025/12/26 - 12:41:54 | 404 |    3.167989ms |      172.19.0.5 | POST     "/api/embed"
+ai_ollama          | [GIN] 2025/12/26 - 12:49:38 | 200 |      40.873µs |       127.0.0.1 | HEAD     "/"
+ai_ollama          | time=2025-12-26T12:49:40.329Z level=INFO source=download.go:177 msg="downloading 970aa74c0a90 in 3 100 MB part(s)"
+ai_ollama          | time=2025-12-26T12:51:05.806Z level=INFO source=download.go:177 msg="downloading c71d239df917 in 1 11 KB part(s)"
+ai_ollama          | time=2025-12-26T12:51:08.353Z level=INFO source=download.go:177 msg="downloading ce4a164fc046 in 1 17 B part(s)"
+ai_ollama          | time=2025-12-26T12:51:09.782Z level=INFO source=download.go:177 msg="downloading 31df23ea7daa in 1 420 B part(s)"
+ai_ollama          | [GIN] 2025/12/26 - 12:51:12 | 200 |         1m33s |       127.0.0.1 | POST     "/api/pull"
+ai_postgres        | The files belonging to this database system will be owned by user "postgres".
+ai_postgres        | This user must also own the server process.
+ai_postgres        | 
+ai_postgres        | The database cluster will be initialized with locale "en_US.utf8".
+ai_postgres        | The default database encoding has accordingly been set to "UTF8".
+ai_postgres        | The default text search configuration will be set to "english".
+ai_postgres        | 
+ai_postgres        | Data page checksums are disabled.
+ai_postgres        | 
+ai_postgres        | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+ai_postgres        | creating subdirectories ... ok
+ai_postgres        | selecting dynamic shared memory implementation ... posix
+ai_postgres        | selecting default max_connections ... 100
+ai_postgres        | selecting default shared_buffers ... 128MB
+ai_postgres        | selecting default time zone ... Etc/UTC
+ai_postgres        | creating configuration files ... ok
+ai_postgres        | running bootstrap script ... ok
+ai_postgres        | performing post-bootstrap initialization ... ok
+ai_postgres        | syncing data to disk ... ok
+ai_postgres        | 
+ai_postgres        | 
+ai_qdrant          |            _                 _    
+ai_qdrant          |   __ _  __| |_ __ __ _ _ __ | |_  
+ai_qdrant          |  / _` |/ _` | '__/ _` | '_ \| __| 
+ai_qdrant          | | (_| | (_| | | | (_| | | | | |_  
+ai_qdrant          |  \__, |\__,_|_|  \__,_|_| |_|\__| 
+ai_qdrant          |     |_|                           
+ai_qdrant          | 
+ai_qdrant          | Version: 1.16.3, build: bd49f45a
+ai_qdrant          | Access web UI at http://localhost:6333/dashboard
+ai_qdrant          | 
+ai_qdrant          | 2025-12-26T12:41:43.024140Z  INFO storage::content_manager::consensus::persistent: Initializing new raft state at ./storage/raft_state.json
+ai_qdrant          | 2025-12-26T12:41:43.198266Z  INFO qdrant: Distributed mode disabled
+ai_qdrant          | 2025-12-26T12:41:43.199727Z  INFO qdrant: Telemetry reporting enabled, id: b34b28f0-e7f1-4296-87f4-90fcd0a87cf8
+ai_qdrant          | 2025-12-26T12:41:43.768291Z  INFO qdrant::tonic: Qdrant gRPC listening on 6334
+ai_qdrant          | 2025-12-26T12:41:43.768768Z  INFO qdrant::tonic: TLS disabled for gRPC API
+ai_qdrant          | 2025-12-26T12:41:43.777274Z  INFO qdrant::actix: TLS disabled for REST API
+ai_qdrant          | 2025-12-26T12:41:43.785804Z  INFO qdrant::actix: Qdrant HTTP listening on 6333
+ai_qdrant          | 2025-12-26T12:41:43.786106Z  INFO actix_server::builder: starting 3 workers
+ai_qdrant          | 2025-12-26T12:41:43.786182Z  INFO actix_server::server: Actix runtime found; starting in Actix runtime
+ai_qdrant          | 2025-12-26T12:41:43.786191Z  INFO actix_server::server: starting service: "actix-web-service-0.0.0.0:6333", workers: 3, listening on: 0.0.0.0:6333
+ai_qdrant          | 2025-12-26T12:41:53.619089Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base/exists HTTP/1.1" 200 69 "-" "python-client/1.16.2 python/3.11.14" 0.006048
+ai_qdrant          | 2025-12-26T12:41:53.638636Z  INFO storage::content_manager::toc::collection_meta_ops: Creating collection knowledge_base
+ai_qdrant          | 2025-12-26T12:41:54.016462Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base HTTP/1.1" 200 57 "-" "python-client/1.16.2 python/3.11.14" 0.392633
+ai_qdrant          | 2025-12-26T12:41:54.095468Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base/exists HTTP/1.1" 200 65 "-" "python-client/1.16.2 python/3.11.14" 0.000232
+ai_qdrant          | 2025-12-26T12:41:54.117793Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base HTTP/1.1" 200 424 "-" "python-client/1.16.2 python/3.11.14" 0.018318
+ai_postgres        | Success. You can now start the database server using:
+ai_postgres        | 
+ai_postgres        |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+ai_postgres        | 
+ai_postgres        | initdb: warning: enabling "trust" authentication for local connections
+ai_postgres        | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+ai_postgres        | waiting for server to start....2025-12-26 12:41:47.229 UTC [48] LOG:  starting PostgreSQL 15.15 (Debian 15.15-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+ai_postgres        | 2025-12-26 12:41:47.243 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+ai_postgres        | 2025-12-26 12:41:47.273 UTC [51] LOG:  database system was shut down at 2025-12-26 12:41:44 UTC
+ai_postgres        | 2025-12-26 12:41:47.291 UTC [48] LOG:  database system is ready to accept connections
+ai_postgres        |  done
+ai_postgres        | server started
+ai_postgres        | CREATE DATABASE
+ai_postgres        | 
+ai_postgres        | 
+ai_postgres        | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+ai_postgres        | 
+ai_postgres        | 2025-12-26 12:41:47.793 UTC [48] LOG:  received fast shutdown request
+ai_postgres        | waiting for server to shut down....2025-12-26 12:41:47.802 UTC [48] LOG:  aborting any active transactions
+ai_postgres        | 2025-12-26 12:41:47.806 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+ai_postgres        | 2025-12-26 12:41:47.807 UTC [49] LOG:  shutting down
+ai_postgres        | 2025-12-26 12:41:47.816 UTC [49] LOG:  checkpoint starting: shutdown immediate
+ai_postgres        | 2025-12-26 12:41:48.506 UTC [49] LOG:  checkpoint complete: wrote 922 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.134 s, sync=0.532 s, total=0.700 s; sync files=301, longest=0.014 s, average=0.002 s; distance=4239 kB, estimate=4239 kB
+ai_postgres        | 2025-12-26 12:41:48.521 UTC [48] LOG:  database system is shut down
+ai_postgres        |  done
+ai_postgres        | server stopped
+ai_postgres        | 
+ai_postgres        | PostgreSQL init process complete; ready for start up.
+ai_postgres        | 
+ai_postgres        | 2025-12-26 12:41:48.672 UTC [1] LOG:  starting PostgreSQL 15.15 (Debian 15.15-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+ai_postgres        | 2025-12-26 12:41:48.674 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+ai_postgres        | 2025-12-26 12:41:48.674 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+ai_postgres        | 2025-12-26 12:41:48.690 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+ai_postgres        | 2025-12-26 12:41:48.718 UTC [64] LOG:  database system was shut down at 2025-12-26 12:41:48 UTC
+ai_postgres        | 2025-12-26 12:41:48.746 UTC [1] LOG:  database system is ready to accept connections
+ai_postgres        | 2025-12-26 12:46:48.719 UTC [62] LOG:  checkpoint starting: time
+ai_postgres        | 2025-12-26 12:47:01.542 UTC [62] LOG:  checkpoint complete: wrote 94 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=12.641 s, sync=0.150 s, total=12.824 s; sync files=55, longest=0.032 s, average=0.003 s; distance=420 kB, estimate=420 kB
+ai_qdrant          | 2025-12-26T12:51:34.568532Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base/exists HTTP/1.1" 200 65 "-" "python-client/1.16.2 python/3.11.14" 0.000723
+ai_qdrant          | 2025-12-26T12:51:34.572799Z  INFO storage::content_manager::toc::collection_meta_ops: Deleting collection knowledge_base
+ai_qdrant          | 2025-12-26T12:51:34.594621Z  INFO actix_web::middleware::logger: 172.19.0.5 "DELETE /collections/knowledge_base HTTP/1.1" 200 57 "-" "python-client/1.16.2 python/3.11.14" 0.021942
+ai_qdrant          | 2025-12-26T12:51:34.602985Z  INFO storage::content_manager::toc::collection_meta_ops: Creating collection knowledge_base
+ai_qdrant          | 2025-12-26T12:51:34.830371Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base HTTP/1.1" 200 57 "-" "python-client/1.16.2 python/3.11.14" 0.227606
+ai_qdrant          | 2025-12-26T12:51:34.900822Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base/exists HTTP/1.1" 200 64 "-" "python-client/1.16.2 python/3.11.14" 0.000286
+ai_qdrant          | 2025-12-26T12:51:34.905508Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base HTTP/1.1" 200 423 "-" "python-client/1.16.2 python/3.11.14" 0.001143
+ai_ollama          | time=2025-12-26T12:51:34.937Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:51:34.938Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:51:34.938Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:51:34.938Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:51:34.951Z level=WARN source=cpu_linux.go:130 msg="failed to parse CPU allowed micro secs" error="strconv.ParseInt: parsing \"max\": invalid syntax"
+ai_ollama          | time=2025-12-26T12:51:34.978Z level=WARN source=server.go:167 msg="requested context size too large for model" num_ctx=8192 n_ctx_train=2048
+ai_ollama          | time=2025-12-26T12:51:34.980Z level=INFO source=server.go:429 msg="starting runner" cmd="/usr/bin/ollama runner --ollama-engine --model /root/.ollama/models/blobs/sha256-970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6 --port 42073"
+ai_ollama          | time=2025-12-26T12:51:34.984Z level=INFO source=sched.go:443 msg="system memory" total="7.8 GiB" free="7.4 GiB" free_swap="0 B"
+ai_ollama          | time=2025-12-26T12:51:34.984Z level=INFO source=server.go:746 msg="loading model" "model layers"=13 requested=-1
+ai_ollama          | time=2025-12-26T12:51:35.028Z level=INFO source=runner.go:1405 msg="starting ollama engine"
+ai_ollama          | time=2025-12-26T12:51:35.030Z level=INFO source=runner.go:1440 msg="Server listening on 127.0.0.1:42073"
+ai_ollama          | time=2025-12-26T12:51:35.039Z level=INFO source=runner.go:1278 msg=load request="{Operation:fit LoraPath:[] Parallel:1 BatchSize:512 FlashAttention:Disabled KvSize:2048 KvCacheType: NumThreads:4 GPULayers:[] MultiUserCache:false ProjectorPath: MainGPU:0 UseMmap:false}"
+ai_ollama          | time=2025-12-26T12:51:35.064Z level=INFO source=ggml.go:136 msg="" architecture=nomic-bert file_type=F16 name=nomic-embed-text-v1.5 description="" num_tensors=112 num_key_values=25
+ai_ollama          | load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-haswell.so
+ai_ollama          | time=2025-12-26T12:51:35.103Z level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 compiler=cgo(gcc)
+ai_ollama          | time=2025-12-26T12:51:35.105Z level=WARN source=runner.go:1213 msg="model does not support caching, setting batch size to context length" batch_size=2048
+ai_ollama          | time=2025-12-26T12:51:35.113Z level=INFO source=runner.go:1278 msg=load request="{Operation:alloc LoraPath:[] Parallel:1 BatchSize:512 FlashAttention:Disabled KvSize:2048 KvCacheType: NumThreads:4 GPULayers:[] MultiUserCache:false ProjectorPath: MainGPU:0 UseMmap:false}"
+ai_ollama          | time=2025-12-26T12:51:35.131Z level=WARN source=runner.go:1213 msg="model does not support caching, setting batch size to context length" batch_size=2048
+ai_ollama          | time=2025-12-26T12:51:35.143Z level=INFO source=device.go:245 msg="model weights" device=CPU size="305.6 MiB"
+ai_ollama          | time=2025-12-26T12:51:35.143Z level=INFO source=device.go:267 msg="compute graph" device=CPU size="234.0 MiB"
+ai_ollama          | time=2025-12-26T12:51:35.143Z level=INFO source=device.go:272 msg="total memory" size="539.6 MiB"
+ai_ollama          | time=2025-12-26T12:51:35.143Z level=INFO source=sched.go:517 msg="loaded runners" count=1
+ai_ollama          | time=2025-12-26T12:51:35.139Z level=INFO source=runner.go:1278 msg=load request="{Operation:commit LoraPath:[] Parallel:1 BatchSize:512 FlashAttention:Disabled KvSize:2048 KvCacheType: NumThreads:4 GPULayers:[] MultiUserCache:false ProjectorPath: MainGPU:0 UseMmap:false}"
+ai_ollama          | time=2025-12-26T12:51:35.139Z level=INFO source=ggml.go:482 msg="offloading 0 repeating layers to GPU"
+ai_ollama          | time=2025-12-26T12:51:35.139Z level=INFO source=ggml.go:486 msg="offloading output layer to CPU"
+ai_ollama          | time=2025-12-26T12:51:35.139Z level=INFO source=ggml.go:494 msg="offloaded 0/13 layers to GPU"
+ai_ollama          | time=2025-12-26T12:51:35.156Z level=INFO source=server.go:1338 msg="waiting for llama runner to start responding"
+ai_ollama          | time=2025-12-26T12:51:35.157Z level=INFO source=server.go:1372 msg="waiting for server to become available" status="llm server loading model"
+ai_ollama          | time=2025-12-26T12:51:35.428Z level=INFO source=server.go:1376 msg="llama runner started in 0.44 seconds"
+ai_ollama          | [GIN] 2025/12/26 - 12:51:35 | 200 |  561.362229ms |      172.19.0.5 | POST     "/api/embed"
+ai_ollama          | time=2025-12-26T12:51:35.496Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:51:35.497Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:51:35.497Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:51:35.497Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | [GIN] 2025/12/26 - 12:52:13 | 200 | 38.339731229s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:52:13.976109Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 84 "-" "python-client/1.16.2 python/3.11.14" 0.061832
+ai_ollama          | time=2025-12-26T12:52:13.995Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:52:13.995Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:52:13.995Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:52:13.995Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 12:52:51 | 200 | 37.348922324s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:52:51.424487Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 82 "-" "python-client/1.16.2 python/3.11.14" 0.034630
+ai_ollama          | time=2025-12-26T12:52:51.451Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:52:51.451Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:52:51.451Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:52:51.451Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 12:53:19 | 200 | 28.399249341s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:53:19.920005Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 81 "-" "python-client/1.16.2 python/3.11.14" 0.041102
+ai_ollama          | time=2025-12-26T12:53:19.936Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:53:19.936Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:53:19.936Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:53:19.936Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 12:53:48 | 200 | 28.616357736s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:53:48.619174Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.024444
+ai_ollama          | time=2025-12-26T12:53:48.635Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:53:48.635Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:53:48.635Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:53:48.635Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 12:54:12 | 200 | 23.738726124s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:54:12.439637Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.026733
+ai_ollama          | time=2025-12-26T12:54:12.467Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:54:12.467Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:54:12.467Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:54:12.467Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | [GIN] 2025/12/26 - 12:54:43 | 200 | 31.423843343s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:54:43.962377Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 84 "-" "python-client/1.16.2 python/3.11.14" 0.037662
+ai_ollama          | time=2025-12-26T12:54:43.978Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:54:43.978Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:54:43.978Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:54:43.978Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 12:55:10 | 200 | 26.635195217s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:55:10.700122Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 82 "-" "python-client/1.16.2 python/3.11.14" 0.040987
+ai_ollama          | time=2025-12-26T12:55:10.716Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:55:10.716Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:55:10.716Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:55:10.716Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 12:55:44 | 200 | 33.724657622s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:55:44.547561Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.036631
+ai_ollama          | time=2025-12-26T12:55:44.569Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:55:44.570Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:55:44.571Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:55:44.571Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | [GIN] 2025/12/26 - 12:56:09 | 200 | 25.273776024s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:56:09.919549Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 82 "-" "python-client/1.16.2 python/3.11.14" 0.040507
+ai_ollama          | time=2025-12-26T12:56:09.931Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:56:09.931Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:56:09.931Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:56:09.931Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 12:56:42 | 200 | 32.524118233s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:56:42.553354Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.027394
+ai_ollama          | time=2025-12-26T12:56:42.579Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:56:42.580Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:56:42.580Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:56:42.580Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_qdrant          | 2025-12-26T12:57:03.340121Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboards HTTP/1.1" 404 0 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.000112
+ai_qdrant          | 2025-12-26T12:57:06.593218Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard HTTP/1.1" 200 925 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.030202
+ai_qdrant          | 2025-12-26T12:57:06.756600Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/assets/index-BG9q9yEd.css HTTP/1.1" 200 24126 "http://localhost:6333/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.081238
+ai_qdrant          | 2025-12-26T12:57:06.953905Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/assets/index-BLw1FxSh.js HTTP/1.1" 200 1466653 "http://localhost:6333/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.277446
+ai_qdrant          | 2025-12-26T12:57:07.363526Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/assets/fonts/Mona_Sans/MonaSans-VariableFont_wdth,wght.ttf HTTP/1.1" 200 209961 "http://localhost:6333/dashboard/assets/index-BG9q9yEd.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.441031
+ai_qdrant          | 2025-12-26T12:57:08.061837Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/cloud/data.json HTTP/1.1" 404 0 "http://localhost:6333/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.004346
+ai_qdrant          | 2025-12-26T12:57:08.084247Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /collections HTTP/1.1" 200 78 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.025470
+ai_qdrant          | 2025-12-26T12:57:08.147021Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/logo-red-black.svg HTTP/1.1" 200 2781 "http://localhost:6333/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.003090
+ai_qdrant          | 2025-12-26T12:57:08.300356Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/logo192.png HTTP/1.1" 200 6177 "http://localhost:6333/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.003161
+ai_qdrant          | 2025-12-26T12:57:08.308182Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /dashboard/favicon.ico HTTP/1.1" 200 15086 "http://localhost:6333/dashboard" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" 0.008781
+ai_qdrant          | 2025-12-26T12:57:08.463284Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /collections HTTP/1.1" 200 78 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.000455
+ai_qdrant          | 2025-12-26T12:57:08.808075Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /collections HTTP/1.1" 200 78 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.000373
+ai_qdrant          | 2025-12-26T12:57:08.833819Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /aliases HTTP/1.1" 200 60 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.000401
+ai_qdrant          | 2025-12-26T12:57:08.853260Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /aliases HTTP/1.1" 200 58 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.001654
+ai_qdrant          | 2025-12-26T12:57:08.872118Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /collections/knowledge_base HTTP/1.1" 200 405 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.017086
+ai_qdrant          | 2025-12-26T12:57:08.906361Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /collections/knowledge_base HTTP/1.1" 200 404 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.000928
+ai_ollama          | [GIN] 2025/12/26 - 12:57:18 | 200 |  36.11340239s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:57:18.765000Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 85 "-" "python-client/1.16.2 python/3.11.14" 0.037817
+ai_ollama          | time=2025-12-26T12:57:18.780Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:57:18.781Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:57:18.781Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:57:18.781Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 12:57:47 | 200 | 28.322366908s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:57:47.186776Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 85 "-" "python-client/1.16.2 python/3.11.14" 0.041645
+ai_ollama          | time=2025-12-26T12:57:47.198Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:57:47.198Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:57:47.198Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:57:47.198Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | [GIN] 2025/12/26 - 12:58:16 | 200 | 29.545506713s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:58:16.835231Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.043452
+ai_ollama          | time=2025-12-26T12:58:16.846Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:58:16.846Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:58:16.846Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:58:16.846Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | [GIN] 2025/12/26 - 12:58:40 | 200 | 23.313985752s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:58:40.243516Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 86 "-" "python-client/1.16.2 python/3.11.14" 0.039536
+ai_ollama          | time=2025-12-26T12:58:40.259Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:58:40.259Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:58:40.259Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:58:40.259Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 12:59:06 | 200 | 26.362476137s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:59:06.704039Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 82 "-" "python-client/1.16.2 python/3.11.14" 0.031900
+ai_ollama          | time=2025-12-26T12:59:06.717Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:59:06.717Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:59:06.717Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T12:59:06.717Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 12:59:33 | 200 | 26.404190837s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:59:33.205147Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.036941
+ai_ollama          | time=2025-12-26T12:59:33.224Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T12:59:33.224Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T12:59:33.224Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T12:59:33.224Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 12:59:33 | 200 |  187.990044ms |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T12:59:33.428568Z  INFO actix_web::middleware::logger: 172.19.0.5 "PUT /collections/knowledge_base/points?wait=true HTTP/1.1" 200 83 "-" "python-client/1.16.2 python/3.11.14" 0.022240
+ai_consultant_app  | ###загрузка в qdrant выполнена###
+ai_consultant_app  | INFO:     Started server process [1]
+ai_consultant_app  | INFO:     Waiting for application startup.
+ai_consultant_app  | INFO:     Application startup complete.
+ai_consultant_app  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+ai_qdrant          | 2025-12-26T13:00:48.873433Z  INFO actix_web::middleware::logger: 172.19.0.1 "GET /collections/knowledge_base HTTP/1.1" 200 406 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.007161
+ai_qdrant          | 2025-12-26T13:00:48.907301Z  INFO actix_web::middleware::logger: 172.19.0.1 "POST /collections/knowledge_base/points/scroll HTTP/1.1" 200 40409 "http://localhost:6333/dashboard" "qdrant-js/1.15.1" 0.028791
+ai_consultant_app  | INFO:     172.19.0.1:37098 - "GET /docs HTTP/1.1" 200 OK
+ai_consultant_app  | INFO:     172.19.0.1:37098 - "GET /openapi.json HTTP/1.1" 200 OK
+ai_qdrant          | 2025-12-26T13:01:56.574627Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base HTTP/1.1" 200 429 "-" "python-client/1.16.2 python/3.11.14" 0.004017
+ai_ollama          | time=2025-12-26T13:01:56.600Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:01:56.602Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:01:56.603Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T13:01:56.603Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 13:01:57 | 200 |  1.339414951s |      172.19.0.5 | POST     "/api/embed"
+ai_ollama          | time=2025-12-26T13:01:57.946Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T13:01:57.946Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:01:57.946Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:01:57.946Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 13:02:00 | 200 |   2.36033297s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T13:02:00.354279Z  INFO actix_web::middleware::logger: 172.19.0.5 "POST /collections/knowledge_base/points/query HTTP/1.1" 200 1017 "-" "python-client/1.16.2 python/3.11.14" 0.050405
+ai_consultant_app  | INFO:     172.19.0.1:45964 - "POST /api/v1/chat/text HTTP/1.1" 200 OK
+ai_qdrant          | 2025-12-26T13:03:45.409256Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base HTTP/1.1" 200 429 "-" "python-client/1.16.2 python/3.11.14" 0.002675
+ai_ollama          | time=2025-12-26T13:03:45.432Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:03:45.432Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T13:03:45.432Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T13:03:45.432Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | [GIN] 2025/12/26 - 13:03:45 | 200 |  391.121298ms |      172.19.0.5 | POST     "/api/embed"
+ai_ollama          | time=2025-12-26T13:03:45.831Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:03:45.831Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:03:45.831Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T13:03:45.831Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 13:03:46 | 200 |  318.294707ms |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T13:03:46.151670Z  INFO actix_web::middleware::logger: 172.19.0.5 "POST /collections/knowledge_base/points/query HTTP/1.1" 200 1017 "-" "python-client/1.16.2 python/3.11.14" 0.010525
+ai_consultant_app  | INFO:     172.19.0.1:59112 - "POST /api/v1/chat/text HTTP/1.1" 200 OK
+ai_qdrant          | 2025-12-26T13:05:30.534379Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base HTTP/1.1" 200 429 "-" "python-client/1.16.2 python/3.11.14" 0.002385
+ai_ollama          | time=2025-12-26T13:05:30.556Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:05:30.557Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T13:05:30.557Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:05:30.557Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 13:05:31 | 200 |   524.64238ms |      172.19.0.5 | POST     "/api/embed"
+ai_ollama          | time=2025-12-26T13:05:31.091Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:05:31.091Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:05:31.091Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T13:05:31.091Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | [GIN] 2025/12/26 - 13:05:31 | 200 |   94.785032ms |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T13:05:31.181105Z  INFO actix_web::middleware::logger: 172.19.0.5 "POST /collections/knowledge_base/points/query HTTP/1.1" 200 1013 "-" "python-client/1.16.2 python/3.11.14" 0.008505
+ai_consultant_app  | INFO:     172.19.0.1:58482 - "POST /api/v1/chat/text HTTP/1.1" 200 OK
+ai_postgres        | 2025-12-26 13:06:49.173 UTC [62] LOG:  checkpoint starting: time
+ai_postgres        | 2025-12-26 13:06:51.131 UTC [62] LOG:  checkpoint complete: wrote 17 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.873 s, sync=0.037 s, total=1.958 s; sync files=11, longest=0.018 s, average=0.004 s; distance=18 kB, estimate=380 kB
+ai_ollama          | [GIN] 2025/12/26 - 13:07:08 | 200 |      38.803µs |      172.19.0.1 | GET      "/"
+ai_ollama          | [GIN] 2025/12/26 - 13:07:08 | 404 |       9.338µs |      172.19.0.1 | GET      "/favicon.ico"
+ai_qdrant          | 2025-12-26T13:11:14.495989Z  INFO actix_web::middleware::logger: 172.19.0.5 "GET /collections/knowledge_base HTTP/1.1" 200 427 "-" "python-client/1.16.2 python/3.11.14" 0.003219
+ai_ollama          | time=2025-12-26T13:11:14.517Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T13:11:14.517Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:11:14.517Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | time=2025-12-26T13:11:14.517Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:11:14.535Z level=WARN source=cpu_linux.go:130 msg="failed to parse CPU allowed micro secs" error="strconv.ParseInt: parsing \"max\": invalid syntax"
+ai_ollama          | time=2025-12-26T13:11:14.566Z level=WARN source=server.go:167 msg="requested context size too large for model" num_ctx=8192 n_ctx_train=2048
+ai_ollama          | time=2025-12-26T13:11:14.573Z level=INFO source=server.go:429 msg="starting runner" cmd="/usr/bin/ollama runner --ollama-engine --model /root/.ollama/models/blobs/sha256-970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6 --port 33257"
+ai_ollama          | time=2025-12-26T13:11:14.574Z level=INFO source=sched.go:443 msg="system memory" total="7.8 GiB" free="7.4 GiB" free_swap="0 B"
+ai_ollama          | time=2025-12-26T13:11:14.574Z level=INFO source=server.go:746 msg="loading model" "model layers"=13 requested=-1
+ai_ollama          | time=2025-12-26T13:11:14.631Z level=INFO source=runner.go:1405 msg="starting ollama engine"
+ai_ollama          | time=2025-12-26T13:11:14.633Z level=INFO source=runner.go:1440 msg="Server listening on 127.0.0.1:33257"
+ai_ollama          | time=2025-12-26T13:11:14.646Z level=INFO source=runner.go:1278 msg=load request="{Operation:fit LoraPath:[] Parallel:1 BatchSize:512 FlashAttention:Disabled KvSize:2048 KvCacheType: NumThreads:4 GPULayers:[] MultiUserCache:false ProjectorPath: MainGPU:0 UseMmap:false}"
+ai_ollama          | time=2025-12-26T13:11:14.666Z level=INFO source=ggml.go:136 msg="" architecture=nomic-bert file_type=F16 name=nomic-embed-text-v1.5 description="" num_tensors=112 num_key_values=25
+ai_ollama          | load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-haswell.so
+ai_ollama          | time=2025-12-26T13:11:14.705Z level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 compiler=cgo(gcc)
+ai_ollama          | time=2025-12-26T13:11:14.708Z level=WARN source=runner.go:1213 msg="model does not support caching, setting batch size to context length" batch_size=2048
+ai_ollama          | time=2025-12-26T13:11:14.713Z level=INFO source=runner.go:1278 msg=load request="{Operation:alloc LoraPath:[] Parallel:1 BatchSize:512 FlashAttention:Disabled KvSize:2048 KvCacheType: NumThreads:4 GPULayers:[] MultiUserCache:false ProjectorPath: MainGPU:0 UseMmap:false}"
+ai_ollama          | time=2025-12-26T13:11:14.734Z level=WARN source=runner.go:1213 msg="model does not support caching, setting batch size to context length" batch_size=2048
+ai_ollama          | time=2025-12-26T13:11:14.741Z level=INFO source=runner.go:1278 msg=load request="{Operation:commit LoraPath:[] Parallel:1 BatchSize:512 FlashAttention:Disabled KvSize:2048 KvCacheType: NumThreads:4 GPULayers:[] MultiUserCache:false ProjectorPath: MainGPU:0 UseMmap:false}"
+ai_ollama          | time=2025-12-26T13:11:14.742Z level=INFO source=device.go:245 msg="model weights" device=CPU size="305.6 MiB"
+ai_ollama          | time=2025-12-26T13:11:14.743Z level=INFO source=device.go:267 msg="compute graph" device=CPU size="234.0 MiB"
+ai_ollama          | time=2025-12-26T13:11:14.743Z level=INFO source=device.go:272 msg="total memory" size="539.6 MiB"
+ai_ollama          | time=2025-12-26T13:11:14.743Z level=INFO source=sched.go:517 msg="loaded runners" count=1
+ai_ollama          | time=2025-12-26T13:11:14.743Z level=INFO source=server.go:1338 msg="waiting for llama runner to start responding"
+ai_ollama          | time=2025-12-26T13:11:14.742Z level=INFO source=ggml.go:482 msg="offloading 0 repeating layers to GPU"
+ai_ollama          | time=2025-12-26T13:11:14.742Z level=INFO source=ggml.go:486 msg="offloading output layer to CPU"
+ai_ollama          | time=2025-12-26T13:11:14.742Z level=INFO source=ggml.go:494 msg="offloaded 0/13 layers to GPU"
+ai_ollama          | time=2025-12-26T13:11:14.755Z level=INFO source=server.go:1372 msg="waiting for server to become available" status="llm server loading model"
+ai_ollama          | time=2025-12-26T13:11:15.013Z level=INFO source=server.go:1376 msg="llama runner started in 0.44 seconds"
+ai_ollama          | [GIN] 2025/12/26 - 13:11:15 | 200 |  696.430151ms |      172.19.0.5 | POST     "/api/embed"
+ai_ollama          | time=2025-12-26T13:11:15.213Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_eta
+ai_ollama          | time=2025-12-26T13:11:15.214Z level=WARN source=types.go:801 msg="invalid option provided" option=tfs_z
+ai_ollama          | time=2025-12-26T13:11:15.214Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat
+ai_ollama          | time=2025-12-26T13:11:15.214Z level=WARN source=types.go:801 msg="invalid option provided" option=mirostat_tau
+ai_ollama          | [GIN] 2025/12/26 - 13:11:16 | 200 |  1.109752717s |      172.19.0.5 | POST     "/api/embed"
+ai_qdrant          | 2025-12-26T13:11:16.348988Z  INFO actix_web::middleware::logger: 172.19.0.5 "POST /collections/knowledge_base/points/query HTTP/1.1" 200 849 "-" "python-client/1.16.2 python/3.11.14" 0.010171
+ai_consultant_app  | INFO:     172.19.0.1:46856 - "POST /api/v1/chat/text HTTP/1.1" 200 OK
+ai_postgres        | 2025-12-26 13:11:49.241 UTC [62] LOG:  checkpoint starting: time
+ai_postgres        | 2025-12-26 13:11:50.006 UTC [62] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.693 s, sync=0.027 s, total=0.765 s; sync files=6, longest=0.017 s, average=0.005 s; distance=2 kB, estimate=342 kB
+
