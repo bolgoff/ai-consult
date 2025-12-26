@@ -1,0 +1,4 @@
+.env
+venv
+/data/all_data.txt
+/data/0000.parquet

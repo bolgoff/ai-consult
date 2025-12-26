@@ -1,0 +1,30 @@
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+pydantic-settings
+sqlalchemy
+asyncpg
+pandas
+pyarrow
+greenlet
+langchain>=0.1.0
+langchain-openai
+<<<<<<< HEAD
+langchain-ollama
+langchain-community
+langchain-qdrant
+qdrant-client
+groq
+aiogram>=3.0
+requests
+aiofiles
+=======
+langchain-community
+langchain-qdrant
+qdrant-client
+openai
+aiogram>=3.0
+requests
+aiofiles
+>>>>>>> 93a86bcb04ca010b2ae1e08f121dda4fc06575ca
