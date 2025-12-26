@@ -8,3 +8,9 @@
 Для развертывания склонируйте репозиторий, создайте файл ```.env``` и укажите необходимые ключи API (OpenAI, Groq). Выполните сборку и запуск инфраструктуры командой ```docker compose up -d --build```. После поднятия контейнеров необходимо загрузить модель эмбеддингов, выполнив команду ```docker exec -it ai_ollama ollama pull nomic-embed-text```. После завершения загрузки модели перезапустите сервис приложения командой ```docker compose restart app```, чтобы скрипт инициализации наполнил векторную базу. Для старта клиентской части установите зависимости и запустите файл ```python bot/bot.py```.
 
 ## Примеры работы решения
+![Alt text](images/usage_example1.png)
+![Alt text](images/usage_example2.png)
+![Alt text](images/usage_example3.png)
+![Alt text](images/qdrant_menu.png)
+![Alt text](images/qdrant_points.png)
+![Alt text](images/telegrambot_usage.png)
